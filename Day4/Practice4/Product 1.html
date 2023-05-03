@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Flex Demo</title>
+    </head>
+    <style>
+        .main-block{
+            height: 400px;
+            width: 800px;
+            border: 3px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            gap: 24px;
+        }
+        .product{
+            border: 1px solid black;
+            /* height: 80px;
+            width: 80px; */
+        }
+        .product2{
+            border: 1px solid red;
+            height: 80px;
+            width: 80px;
+            flex-grow: 0.5;
+
+        }
+    </style>
+    <body>
+        <div class="main-block">
+            <div class="product">Product 1</div>
+            <div>
+                
+                <br />
+          <p class="basic">BASIC</p>
+          <h3 class="pprice">$199 <span>/month</span></h3>
+          <hr />
+          <div class="para">
+            <p class="pdes">
+              <b style="color: #017aff">✔</b> &nbsp; Lorem ipsum dolor sit amet.
+            </p>
+            <p class="pdes">
+              <b style="color: #017aff">✔</b> &nbsp; Sed ut perspiciatis
+            </p>
+            <p class="pdes">
+              <b style="color: #017aff">✔</b> &nbsp; At Vero eos et accusamus.
+            </p>
+            <p class="pdes">✖ &nbsp; <s>Nam libero itempre.</s></p>
+            <p class="pdes">✖ &nbsp; <s>Sed ui perspicaits.</s></p>
+            <p class="pdes">✖ &nbsp; <s>Sed ut prespictis.</s></p>
+            <br />
+            <button class="butt">Subscribe</button> <br />
+            </div>
+            <!-- <div class="product2">Product 2</div>
+            <div class="product">Product 3</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 5</div>
+            <div class="product">Product 6</div>
+            <div class="product">Product 7</div>
+            <div class="product">Product 8</div>
+            <div class="product">Product 9</div>
+            <div class="product">Product 10</div>
+            <div class="product">Product 11</div>
+            <div class="product">Product 12</div>
+            <div class="product">Product 13</div> -->
+        </div>
+    </body>
+</html>
+<!-- 
+flex-direction
+flex-wrap 
+justify-content- start, center, flex-end space-evenly|around| between
+align-content -start, center, flex-end space-evenly|around| between, 
+align-items - flex-start, center, end .......
+align-self- 
+flex-grow 
+flex-shrink 
+flex-basis 
+gap -->

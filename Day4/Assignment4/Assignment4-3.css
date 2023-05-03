@@ -1,0 +1,38 @@
+body {
+    background-color: dodgerblue;
+  }
+  #mainb{
+    /* border: 1px solid red; */
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .block {
+    /* border: 1px solid black; */
+    text-align: center;
+  }
+
+  #pb {
+    color: white;
+    padding: 20px;
+    font-size: 38px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+  }
+  #pe {
+    color: white;
+    font-family: roboto;
+    font-size: 18px;
+  }
+  .butt {
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: roboto;
+    font-size: 15px;
+  }

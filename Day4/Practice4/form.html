@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>flexing</title>
+        <style>
+            .main-block{
+                display: flex;
+                background-color: cornflowerblue;
+                height: 500px;
+                flex-direction: column;
+                display:flex;
+                
+            }
+            .inner-block_1{
+                height: 120px;
+                /* flex-direction: column;
+                flex-wrap: wrap;
+                justify-content:space-evenly; */
+                text-align: center;
+                color: aliceblue;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+            }
+            .inner-block_2{
+                height: 350px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content:center;
+                align-items: center;
+                align-content: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                gap: 40px;
+            }
+            .card{
+                padding: 10px;
+                width: 200px;
+                text-align: center;
+                background-color: white;
+                border-radius: 10px;
+            }
+            button{
+                background-color: dodgerblue;
+                border-radius: 15px;
+                font-size: 15px;
+                width: 150px;
+                height: 25px;
+                border: 0px;
+                color: aliceblue;
+                
+            }
+        
+
+        </style>
+    </head>
+    <body>
+        <div class="main-block">
+            <div class="inner-block_1">
+                <p> <h1> Bootstrap pricing Table </h1>
+                    Easily create a classy pricing table in Bootstrap 4. <br>
+                    Bootstrap snippet by Bootstrapious.
+
+                </p>
+            </div>
+            <div class="inner-block_2">
+                <div class="card"> 
+                    <p><b> BASIC <br> <br>
+                        $199/month</b> <br>
+                        <hr> <br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.
+                    </p> 
+                    <button> Subscribe</button>
+                 </div>
+                 <div class="card"> 
+                    <p><b> PRO <br><br>
+                        $399/month</b> <br>
+                        <hr> <br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.
+                    </p> 
+                    <button> Subscribe</button>
+                 </div><div class="card"> 
+                    <p><b> ENTERPRICE <br><br>
+                        $899/month</b> <br>
+                        <hr> <br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.<br>
+                        This is a test.
+                    </p> 
+                    <button> Subscribe</button>
+                 </div>
+            </div>
+        </div>
+    </body>
+</html>

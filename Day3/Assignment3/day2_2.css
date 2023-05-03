@@ -1,0 +1,25 @@
+.headc {
+    background-color: aqua;
+    font-size: 24px;
+  }
+  table {
+    border: 5px solid red;
+    width: 500px;
+    border-spacing: 0px;
+  }
+  th,
+  td {
+    border: 1px solid green;
+  }
+  input,
+  select {
+    width: 150px;
+    border-radius: 5px;
+  }
+  #radi {
+    width: 20px;
+  }
+  form{
+    font-size: 20px;
+    font-family: roboto;
+  }

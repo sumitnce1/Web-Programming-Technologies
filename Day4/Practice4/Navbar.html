@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Navbar</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            .nav-container{
+                /* border: 1px solid white; */
+                color: white;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .menu{
+                border: 1px solid lime;
+                padding: 10px;
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: monospace;
+            }
+            .space{
+                flex-grow: 1;
+            }
+            .search{
+                /* border: 1px solid red; */
+                display: flex;
+                align-items: center;
+                width: 28vw;
+                background-color: white;
+                color: black;  
+                padding: 5px;                              
+                
+            }
+            .search-input{
+                padding: 6px;
+                font-size: 14px;
+                
+            }
+            .search-ico{
+                padding-right: 8px;
+            }
+            .heading{
+                color: lime;
+                text-align: center;
+            }
+            .container{
+                border: 1px solid wheat;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                                
+            }
+            .plans{
+                border: 1px solid white;
+                color: black;
+                background-color: #fff;
+                padding-left: 40px;
+                padding-right: 40px;                
+                padding-bottom: 10px;
+                border-radius: 10px;
+            }
+            .plan-title{
+                text-align: center;
+                font-weight: bolder;
+                font-family: monospace;
+                font-size: 15px;
+            }
+            .plan-price{
+                font-size: 32px;
+                font-weight: bolder;
+            }
+            .check{
+                color: blue;
+            }            
+            .plan-text{
+                margin-left: 10px;
+                font-family: monospace;
+                color: gray;
+            }
+            .line-cross{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-container">
+            <a href="#" class="menu">Home</a>
+            <a href="#" class="menu">About Us</a>
+            <a href="#" class="menu">PG-DAC</a>
+            <a href="#" class="menu">PG-DFDB</a>
+            <div class="space menu">
+                <div class="search">
+                     <input type="text" class="search-input" placeholder="Search Here" name="" id="">
+                    <span class="search-ico">🔍</span>
+                </div>
+            </div>
+            <a href="#" class="menu">Login</a>   
+        </div>
+        <div class="heading">
+            <h1>Bootstrap pricing table</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Minima, assumenda?</p>
+        </div>
+        <div class="container">
+            <div class="plans">
+                <p class="plan-title"><b>BASIC</b></p>
+                <p class="plan-price"><span>$199</span><span class="price-text">/month</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+            </div>
+            <div class="plans">
+                <p class="plan-title"><b>PRO</b></p>
+                <p class="plan-price"><span>$199</span><span class="price-text">/month</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+            </div>
+            <div class="plans">
+                <p class="plan-title"><b>ENTERPRISE</b></p>
+                <p class="plan-price"><span>$199</span><span class="price-text">/month</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="check">&check;</span><span class="plan-text">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+                <p class="plan-text"><span class="cross">&cross;</span><span class="plan-text line-cross">Some plan details</span></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+form{
+    background-color: cornflowerblue;
+    margin-left: 50px;
+    margin-right: 500px;
+}
+legend{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: roboto;           
+}
+td{
+    font-size: 12px;
+    font-family: roboto;
+    color: rgb(247, 255, 1);
+}
+input, select{
+    width: 150px;
+    border-radius: 5px;
+}
+#radi{        
+    width: 20px;
+}
+table{
+  width:700;
+} 

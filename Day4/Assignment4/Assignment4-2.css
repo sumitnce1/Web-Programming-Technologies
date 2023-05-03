@@ -1,0 +1,48 @@
+body {
+    background-color: #7cbb5c;
+  }
+  .main {
+    /* border: 1px solid red; */
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .block {
+    /* border: 1px solid black; */
+    text-align: center;
+    height: 50%;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: white;
+    box-shadow: 0 5px 10px 10px #000000aa, 0 16px 20px 10px #1f1f1f30;
+  }
+  input {
+    background-color: #f8f8f8fe;
+  }
+  #user {
+    margin-top: 50px;
+    width: 100%;
+    border: 0px;
+    padding: 15px;
+  }
+  #pass {
+    margin-top: 15px;
+    width: 100%;
+    border: 0px;
+    padding: 15px;
+  }
+  #butt {
+    background-color: #4eae52;
+    margin-top: 15px;
+    width: 100%;
+    border: 0px;
+    padding: 15px;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: #458525;
+  }

@@ -1,0 +1,24 @@
+table, td, th{
+    border: 2px solid rgb(43, 12, 219);
+    border-spacing: 5px;
+    text-align: center;
+    empty-cells: hide;
+    
+}
+.head,.one, .tsix{
+    background-color: yellow;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.sday{
+    background-color: #ff3aefca;
+}
+#satcolor{
+    background-color: cyan;
+}
+#suncolor{
+    background-color: green;
+    text-align: center;
+    color: white;                
+}

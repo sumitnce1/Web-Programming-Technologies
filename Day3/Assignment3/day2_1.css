@@ -1,0 +1,16 @@
+form{
+    background-color: #efcac175;
+    font-family: roboto;
+  }
+  input, select{
+        width: 150px;
+        border-radius: 5px;
+    }
+    #radi{        
+        width: 20px;
+    }  
+    legend{
+      font-size: 20px;
+      font-weight: 700;
+      font-family: Roboto;
+    } 

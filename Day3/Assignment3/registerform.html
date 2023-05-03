@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>Register Form</title>
+  </head>
+  <style>
+    body {
+      background-color: #2e3740;
+    }
+    #mainb {
+      /* border: 1px solid red; */
+      height: 95vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .block {
+      /* border: 1px solid black; */
+      text-align: center;
+    }
+    h1 {
+      color: #6d7781;
+      font-family: cursive;
+    }
+    #user {
+      margin-top: 30px;
+      width: 80%;
+      border: 0px;
+      padding: 10px;
+      padding-left: 1px;
+      border-bottom: 1px solid gray;
+      font-family: roboto;
+      color: gray;
+      background-color: transparent;
+    }
+    #pass {
+      margin-top: 10px;
+      width: 80%;
+      border: 0px;
+      padding: 10px;
+      padding-left: 1px;
+      border-bottom: 1px solid gray;
+      font-family: roboto;
+      color: gray;
+      background-color: transparent;
+    }
+    #email {
+      margin-top: 10px;
+      width: 80%;
+      border: 0px;
+      padding: 10px;
+      padding-left: 1px;
+      border-bottom: 1px solid gray;
+      font-family: roboto;
+      color: gray;
+      background-color: transparent;
+    }
+    p {
+      text-align: left;
+      margin-top: 10px;
+      margin-left: 35px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: roboto;
+      color: gray;
+    }
+    #butt {
+      background-color: #1fce6d;
+      margin-top: 15px;
+      width: 80%;
+      border: 0px;
+      padding: 15px;
+      color: white;
+    }
+    .spd {
+      padding: 5px;
+      margin-top: 15px;
+      font-weight: bold;
+      font-family: roboto;
+      color: gray;
+      font-size: 12px;
+    }
+  </style>
+  <body>
+    <div id="mainb">
+      <div class="block">
+        <h1>Register</h1>
+        <form action="">
+          <input type="text" placeholder="Username" name="" id="user" />
+          <input type="password" id="pass" placeholder="Password" />
+          <input type="email" name="" id="email" placeholder="E-Mail Address" />
+          <p>
+            <input type="radio" name="rd" id="radi" />Accept rules and
+            conditions
+          </p>
+          <br />
+          <input type="submit" id="butt" value="Register" />
+          <div class="spd">
+            <span class="sp">Already have an account?</span>
+          </div>
+          <i class="fa-brands fa-github"></i>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

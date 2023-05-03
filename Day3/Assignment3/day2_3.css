@@ -1,0 +1,36 @@
+.foot {
+    background-color: cyan;
+  }
+  table {
+    border: 2px dotted red;
+    margin: 11px;
+    border-spacing: 0px;
+  }
+  th,
+  td {
+    border: 1px solid rgb(176, 176, 176);
+    border-left: 1px solid;
+    font-style: italic;
+  }
+  input,
+  select {
+    width: 150px;
+    border-radius: 5px;
+    border: 2px dotted rebeccapurple;
+  }
+  #radi {
+    width: 20px;
+  }
+  th {
+    text-align: right;
+  }
+  .sub,
+  .res {
+    text-align: center;
+    font-size: 20px;
+    margin-right: 150px;
+  }
+  .sub:hover,
+  .res:hover {
+    background-color: blue;
+  }
