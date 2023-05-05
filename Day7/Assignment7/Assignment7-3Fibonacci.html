@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-7-3-Fibonacci series</title>
+    <!-- 3. Write a program to display Fibonacci series -->
+    <script>
+        var num= parseInt(prompt("Enter the number of terms in the series:"));
+        var a=0, b=1;
+        document.write("<h2>" +a +"</h2>");
+        document.write("<h2>" +b +"</h2>");
+
+        for(var i=2; i <= num; i++) {
+        var c=a+b;
+        document.write("<h2>" +c + "</h2>");
+        a = b;
+        b = c;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

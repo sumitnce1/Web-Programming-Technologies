@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        //Array
+        var arr =[]; //empty array
+        var friends = ["Sumit", 234,3.34, true] //declare array with values
+                //      0       1    2    3
+        console.log("Lenght of array", friends.length) 
+        //Access length
+        console.log(friends[1]);
+        friends[1]="Kumar";
+        // friends[3]= false
+        console.log(friends);
+
+        //Array operations
+        //Insert
+        friends.push("Yogita"); //adding element at the end of array
+        console.log(friends);
+        friends.unshift("Anushka"); //Adding element at the begining
+        console.log(friends);
+
+        //Remove element
+        friends.pop() //remove last element of the array
+        console.log(friends);
+        friends.shift() //remove first element of the array
+        console.log(friends);
+        friends.splice(1,1)
+        console.log(friends);
+
+        var arr =["Anubhav", "Rajat","Rahul"];
+        //Array functions:
+        arr.reverse();
+        console.log(arr);
+        console.log(arr.includes("Anubhav")); //True
+        console.log(arr.includes("Raj")); //False
+
+        console.log(arr.join(" ")); //Rahul Rajat Anubhav
+        console.log(arr.join("abc")); //RahulabcRajatabcAnubhav
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

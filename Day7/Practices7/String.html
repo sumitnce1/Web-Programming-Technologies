@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <script>
+        var name ="Sumit"
+        //         01234
+        console.log("Lenght of string", name.length);
+        //Access each index
+        console.log(name[4]);
+        console.log(name[8]); //undefined
+        name[4]='o';
+        console.log(name); //not changes in string
+
+
+        //String functions
+        console.log("Uppercase", name.toUpperCase());
+        console.log("Uppercase", name.toLowerCase());
+
+        //CharAt
+        console.log(name.startsWith("Su"));
+        console.log(name.endsWith("it"));
+        console.log(name.charAt(3));
+        console.log(name.includes("mi"))
+        var nam ="sumddimddt"
+        console.log(nam.indexOf("mdd"));
+        console.log(nam.lastIndexOf("mdd"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

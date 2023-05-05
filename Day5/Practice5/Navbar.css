@@ -1,0 +1,93 @@
+body{
+    background-color:black;
+}
+.nav-container{
+    /*border:1px solid white;*/
+    color : white;
+    display :flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    border-bottom:1px solid lime;
+}
+.menu{
+    border:1px solid lime; 
+    padding:12px; 
+    text-decoration:none;
+    color:white;
+    font-size:22px;
+    font-family:monospace;
+}
+.space{
+    flex-grow:1;
+}
+.search{
+   /*border: 1px solid red;*/
+   display :flex;
+   align-items:center;
+   width:24vw;
+   background-color:white;
+   color:black;
+   padding:2px;
+   border-radius:2px;
+}
+.search-input{
+    padding:5px;        
+    font-size:16px;
+    border:0px;
+}
+.search-ico{
+    padding-left:8px;
+    font-size:27px;
+}
+.heading {
+    color: lime;
+    text-align: center;
+}
+.container {
+    /*border: 1px solid white;*/
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+.plans {
+    border: 1px solid white;
+    color: black;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 14px;
+}
+.plan-title {
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    font-size: 15px;
+}
+.plan-price {
+    text-align: center;
+}
+.price {
+    font-size: 38px;
+    font-weight: bolder;
+}
+.check {
+    color: blue;
+}
+.plan-text {
+    margin-left: 10px;
+    font-family: monospace;
+    color: #3b3b3b;
+}
+.line-cross{
+    text-decoration:line-through;
+}
+.hr {
+    background-color: lime;
+    height: 5px;
+    width: 50px;
+    border:0px;
+}

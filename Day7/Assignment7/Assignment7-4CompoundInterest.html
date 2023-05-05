@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-7-4-Compound Interest</title>
+    <!-- 4. Create a web page to calculate the compound Interest.
+    p = Principal,
+    r = Rate of Interest,
+    n = period in years
+    The values used in the example in the following figure are as follows:
+    P = 1000, n = 1, r = 10 -->
+    <script>
+        var p=1000,n=1,r=10;
+        var amount = p*Math.pow((1 + r/100), n);
+        var ci =amount-p;
+
+        document.write("<h2>Compound Interest: " + ci + "</h2><br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

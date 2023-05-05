@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment7-7Table</title>
+    <!-- 7.Write code to print table (Take Number and range from user) -->
+    <script>
+        var number = parseInt(prompt("Enter a number: "));
+        document.write("<h2>Number: " +number +"</h2>");
+        var range = parseInt(prompt("Enter a range: "));
+        document.write("<h2>Range: " +range +"</h2>");
+       
+        for (var i=1; i<=range; i++) {
+            var product = i * number;
+            document.write("<h5>" +number + "X" +i + "=" +product+"</h5>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

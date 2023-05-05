@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment7-4-SUMIT</title>
+    <script>
+// 4.Implement a calculator using if-else ladder
+// (Take two number from prompt and also operator from prompt) 
+        var x = parseInt(prompt("Enter the first number: "));
+        var opr = prompt("Enter the operation you want to perform like +, -, *, / or %: ");
+        var y = parseInt(prompt("Enter the second number: "));
+        if(opr=="+"){
+            document.write("<h1>You enter the operation perform addition: </h1>"+ (x+y));
+        }
+        else if(opr=="-"){
+            document.write("<h1> You enter the operation perform Subtraction: </h1>"+(x-y));
+        }
+        else if(opr=="*"){
+            document.write("<h1>You enter the operation perform Multiplication: </h1>"+ (x*y));
+        }
+        else if(opr=="/"){
+            document.write("<h1>You enter the operation perform Divide: </h1>"+ (x/y));
+        }
+        else if(opr=="%"){
+            document.write("<h1>You enter the operation perform modulas: </h1>"+ (x%y));
+        }
+        else{
+            document.write("<h1>Invalid Input.</h1>")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

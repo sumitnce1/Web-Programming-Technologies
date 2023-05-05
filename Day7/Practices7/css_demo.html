@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>CSS demo</title>
+            <style>
+                input[type="text"]{
+                    border: 2px solid red;
+                    width:18rem;
+                }
+                input[type="checkbox"]{
+                
+                }
+                input[type="checkbox"]:checked{
+                    accent-color:green;
+                }
+               .para,.paragraph{
+                    background-color:yellow;
+                    color:blue;
+                }
+                .para span{
+                    font-size:0.5em;
+                }
+
+                .para::first-letter{
+                    font-size:50px;
+                }
+                .data1::first-line{
+                    color:red;
+                }
+
+                .para:first-child{
+                    text-decoration:line-through;
+                
+                }
+            </style>    
+        </head>
+<body>
+    
+        <p id="first" class="para data1"> Bootstrap’s CSS aims to <span> apply the bare minimum of styles to </span>make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.</p>
+        <p id="second" class="para data2"> Bootstrap’s CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.</p>
+        <p id="third" class="para data1"> Bootstrap’s CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to <span>adjust that design for larger devices</span>. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.</p>
+        <p id="four" class="paragraph"> Bootstrap’s CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.</p>
+    
+    <input type="checkbox">Remember me<br><br>
+    Name: <input type="text"><br><br>
+    Email: <input type="email"><br><br>
+    Comment: <input type="text"><br>
+
+</body>
+</html>

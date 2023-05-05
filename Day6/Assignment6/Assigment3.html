@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css" />
+    <script src="/bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container ps-lg-5 pe-lg-5" style="">
+        <div class="p-5 text-center">
+            <a href="#"><img src="bootstrap-logo.svg" width="80" alt=""></a>
+            <h2>Checkout form</h2>
+            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        </div>
+          <!-- form started -->
+          <div class="row">
+          <div class="col-md-8 p-5">
+            <h4 class="mb-3">Billing address</h4>
+            <form action="" method="">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="pb-2">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="pb-2">Last name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="pb-2">Username</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="pb-2">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" placeholder="you@example.com">            
+                </div>
+
+                <div class="mb-3">
+                    <label class="pb-2">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>                    
+                </div>
+          
+                <div class="mb-3">
+                    <label class="pb-2">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" placeholder="Apartment or suite">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                      <label class="form-label">Country</label>
+                      <select class="form-select" required>
+                        <option selected>Choose...</option>
+                        <option>United State</option>
+                        <option>India</option>
+                        <option>Rusia</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Country</label>
+                        <select class="form-select" required>
+                        <option value="">Choose...</option>
+                        <option>California</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                      <label class="form-label">Zip</label>
+                      <input type="text" class="form-control" placeholder="" required>
+                      <div class="invalid-feedback">
+                        Zip code required.
+                      </div>
+                    </div>
+
+                    <hr class="mb-4">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="" id="">
+                <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="" id="">
+                <label class="custom-control-label">Save this information for next time</label>
+              </div>
+              <hr class="mb-4">
+      
+              <h4 class="mb-3">Payment</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radi">
+                <label class="form-check-label">Credit card</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radi">
+                <label class="form-check-label">Debit card</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radi">
+                <label class="form-check-label">PayPal</label>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label class="pb-2">Name on card</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="h6">full name as displayed on card</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="pb-2">Caredit card number</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+            </div>
+
+
+            </div>
+
+            </form>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+    </div>
+</body>
+</html>

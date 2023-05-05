@@ -1,0 +1,47 @@
+Complete in same code
+1.Write a JS program to perform substraction of two number
+2.Write a JS program to perform multiplication of three number
+3.Write a JS program to perform division of two number
+4.Write a JS program to perform modulas of two number
+______________________________________________________________
+1.Write a program to find given number is even or odd.
+2.Write a program to find the greater number out of three numbers.
+3.Write a program to find the print the day of week.
+4.Implement a calculator using if-else ladder
+(Take two number from prompt and also operator from prompt) 
+
+opr = "+"
+if(opr == "+")
+
+___________________________________________________________________________
+1.Print table on page(Take input from user)
+Format:
+2 * 1 = 2
+2 * 2 = 4
+
+2.Find the sum of digit of 5 digit number(Take input from user)
+
+3. Write a program to display Fibonacci series
+4. Create a web page to calculate the compound Interest.
+p = Principal,
+r = Rate of Interest,
+n = period in years
+The values used in the example in the following figure are as follows:
+P = 1000, n = 1, r = 10
+
+5. Write a program to find the sum of squares of even numbers upto N (accept from user).Take N from user
+6.Write a program to print even number from 1 to 20
+7.Write code to print table (Take Number and range from user)
+If user inputs 2 and range 20 then print table of 2 till 20
+________________________________________________________________________________________
+1.Write a program to check given string ends with "t" or not
+2.Write a code to accept name of fruits name from user and show in list
+______________________________________________
+num="1,2,3,4,5,6,7,8,9"
+Note:Use num string in below questions:
+1.Fetch "1" and "5" from string and perform numerical addition
+2.Fetch "2" and "8" from string and perfrom numerical muliplication
+______________________________________________________________
+
+1.Write a code to print fibonnaci series( 1,1,2,3,5,8,13,21...) till 100.
+2.Write a code to check the given string is palindrome or not. (abba)
