@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      // 4.Write a code which accepts a sequence of comma seperated five numbers and find the addition of all of them
+      var n = prompt("Enter 5 no. , no.:");
+      document.write("You have entered this 5 no.: " + n + "<br>");
+      var num = n.split(",");
+      var sum = 0;
+
+      for (var i = 0; i < num.length; i++) {
+        sum += parseInt(num[i]);
+      }
+      document.write("The sum of the 5 no. is: " + sum);
+    </script>
+  </head>
+  <body></body>
+</html>

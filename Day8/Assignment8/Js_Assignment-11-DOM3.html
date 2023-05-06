@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Js_Assignment-10DOM-3-Sumit</title>
+    <!--3.Create a web page and take 3 Movies details  and show in table
+    Movies property : Movie Name,Price,Seat -->
+    <script>        
+      var mov = [];
+      function addMov(){
+        var movName = document.getElementById("name").value
+        var movPrice = document.getElementById("price").value
+        var movSeat = document.getElementById("seat").value
+
+        var temp = {
+          name: movName,
+          price: movPrice,
+          seat: movSeat,
+        };
+        mov.push(temp);
+        clr();
+      }
+
+      function display_Mov(){
+      var htmlStr = "<table border=1 cellspacing=1 cellpadding=5>"
+		for(var i = 0; i < mov.length; i++){
+			htmlStr = htmlStr + "<tr><td>"+mov[i].name+"</td><td>"+mov[i].price+"</td><td>"
+                +mov[i].seat+"</td></tr>"
+		}
+		htmlStr = htmlStr + "</table>"
+        document.getElementById("data").innerHTML= htmlStr
+    }
+    function clr(){
+        document.getElementById("name").value=""
+        document.getElementById("price").value=""
+        document.getElementById("seat").value=""
+    }
+    </script>
+  </head>
+  <body>
+    Enter Movie Name: <input type="text" name="" id="name"> <br>
+    Enter Movie Price: <input type="text" name="" id="price"><br>
+    Enter Movie SeatNO.: <input type="text" name="" id="seat"><br>
+    <button onclick="addMov()">Save</button>
+    <button onclick="display_Mov()">Show</button>
+    <div id="data"></div>
+  </body>
+</html>

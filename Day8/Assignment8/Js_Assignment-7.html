@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Js_Assignment-7</title>
+    <!-- 7.Write a code to accept name of Friends name from user and show in list -->
+    <script>        
+      var friList = [];
+      
+      function add_friends_list(){
+      for (var i = 0; i<5; i++) {
+        var friName = prompt("Enter Friends Name: ");
+        var temp = {
+          name: friName,
+        };
+        friList.push(temp);
+      }
+    }
+    add_friends_list();
+
+    function display_list(){
+      var htmlStr = "<ol>"
+		for(var i = 0; i < friList.length; i++){
+			htmlStr = htmlStr + "<li>"+friList[i].name+"</li>"
+		}
+		htmlStr = htmlStr + "</ol>";
+		document.write(htmlStr)
+    }
+    display_list();
+    </script>
+  </head>
+  <body></body>
+</html>

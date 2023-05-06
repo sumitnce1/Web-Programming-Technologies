@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Js_Assignment-6</title>
+    <!-- 6.Create a web page and take 3 Movies details from prompt and show in table
+    Movies property : Movie Name,Price,Seat -->
+    <script>        
+      var mov = [];
+      for (var i = 0; i < 3; i++) {
+        var movName = prompt("Enter mov Name: ");
+        var movPrice = prompt("Enter mov Price: ");
+        var movSeat = prompt("Enter mov Seat No.: ");
+
+        var temp = {
+          name: movName,
+          price: movPrice,
+          seat: movSeat,
+        };
+        mov.push(temp);
+      }
+      var htmlStr = "<table border=1 cellspacing=1 cellpadding=5>"
+		for(var i = 0; i < mov.length; i++){
+			htmlStr = htmlStr + "<tr><td>"+mov[i].name+"</td><td>"+mov[i].price+"</td><td>"
+                +mov[i].seat+"</td></tr>"
+		}
+		htmlStr = htmlStr + "</table>"
+		document.write(htmlStr)
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

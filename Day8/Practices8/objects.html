@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<script type="text/javascript">
+		var obj = {} // empty object
+	
+		var car1 ={
+			modalNo:"A10",
+			brand:"TATA",
+			engineNO:"6784234",
+			chasisNo:"7639872"
+		}
+
+		var car2 ={
+			modalNo:"A10",
+			brand:"TATA",
+			engineNO:"6784235",
+			chasisNo:"7639873"
+		}
+
+		var std1 = {
+			name : "Siddhant",
+			prn : "78462374",
+			state: "MH",
+			phone:"4682734"
+		}
+		var std2 = {
+			name:"Anubhav",
+			prn : "32478129",
+			state:"UP",
+			email : "sid@gmail.com"
+		}
+		
+		//Access Objects
+		console.log(std2)
+		console.log(std1)
+		//Access each property
+		console.log(std1.name)
+		console.log(std2.email)
+		console.log(std1["name"])
+		std1["name"] = "Siddhant verma"
+		std1.phone = "87514567651"
+		console.log(std1)
+
+		//Add new property to object
+		std1.email = "sid@gmail.com" // If property exist it will override the value if not itll insert the new property in object
+		console.log(std1)
+		std2.phone = "87514567651"
+		console.log(std2)
+
+		//Remove from the object
+		delete std1.state; // delete the property
+		console.log(std1)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

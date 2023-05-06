@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <title>Js_Assignment-1-2</title>
+    <!-- num="1,2,3,4,5,6,7,8,9"
+    Note:Use num string in below questions:
+    1.Print only numbers not comma
+    2.Print all even numbers -->
+    <script>
+      var num = "1,2,3,4,5,6,7,8,9";
+      document.write(num.split(',').join(" ") +"<br>");
+    
+      var number = num.split(",");
+      for (var i=0; i<number.length; i++) {
+        var n = parseInt(number[i]);
+        if (n%2===0) {
+          document.write(" " +n);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

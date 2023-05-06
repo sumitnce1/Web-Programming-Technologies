@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM-Demo</title>
+    <script>
+        function add(){
+        var num1= document.getElementById("num1").value
+        var num2= document.getElementById("num2").value
+        var result= Number(num1) + Number(num2);
+        document.getElementById("results").innerHTML= +result;
+    }
+    function sub(){
+
+    }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="num1"><br>
+    <input type="text" name="" id="num2"><br>
+    <button onclick="add()">Add</button>
+    <h1 id="results">Result is here show</h1>
+</body>
+</html>

@@ -1,0 +1,25 @@
+num="1,2,3,4,5,6,7,8,9"
+Note:Use num string in below questions:
+1.Print only numbers not comma
+2.Print all even numbers
+______________________________________________________________________
+
+3.Write a code to take string input from user and remove duplicate words.
+4.Write a code which accepts a sequence of comma seperated five numbers and find the addition of all of them
+
+5.Create a web page and take 3 employee details from prompt and show in table
+Employee property : Id,Name,Phone,Salary
+6.Create a web page and take 3 Movies details from prompt and show in table
+Movies property : Movie Name,Price,Seat
+_________________________________________________________________
+Use function :
+7.Write a code to accept name of Friends name from user and show in list
+8.Create a web page and take 3 employee details from prompt and show in table
+Employee property : Id,Name,Phone,Salary
+
+_________________________________________________________________
+1.Write a calculator program.Create two input box and five button add,substract,multiply divide, modulas
+
+2.Write a code to accept name of Friends name from user and show in list using DOM
+3.Create a web page and take 3 Movies details  and show in table
+Movies property : Movie Name,Price,Seat

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- 3.Write a code to take string input from user and remove duplicate words. -->
+    <script>
+      var inStr = prompt("Enter a string: ");
+      document.write("<h2>Input is: " +inStr +"</h2>");
+      var wordsArray = inStr.split(" ");
+
+      var uniqWord = [...new Set(wordsArray)];
+      var uniqStr = uniqWord.join(" ");
+      document.write("<h2> Output: " + uniqStr  +"</h2>");
+    </script>
+  </head>
+  <body></body>
+</html>

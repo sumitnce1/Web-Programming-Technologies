@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Js_Assignment-5</title>
+    <!-- 5.Create a web page and take 3 employee details from prompt and show in table
+    Employee property : Id,Name,Phone,Salary -->
+    <script>
+        
+      var emp = [];
+      for (var i = 0; i < 3; i++) {
+        var empId = prompt("Enter Emp ID: ");
+        var empName = prompt("Enter Emp Name: ");
+        var empPhone = prompt("Enter Emp Phone: ");
+        var empSal = prompt("Enter Emp Salary: ");
+
+        var temp = {
+          id: empId,
+          name: empName,
+          phone: empPhone,
+          salary: empSal,
+        };
+        emp.push(temp);
+      }
+      var htmlStr = "<table border=1 borderspacing=0>"
+		for(var i = 0; i < emp.length; i++){
+			htmlStr = htmlStr + "<tr><td>"+emp[i].id+"</td><td>"+emp[i].name+"</td><td>"
+                +emp[i].phone+"</td><td>"+emp[i].phone+"</td></tr>"
+		}
+		htmlStr = htmlStr + "</table>"
+		document.write(htmlStr)
+
+    </script>
+  </head>
+  <body></body>
+</html>

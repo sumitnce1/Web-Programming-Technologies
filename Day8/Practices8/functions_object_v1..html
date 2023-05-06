@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<script type="text/javascript">
+		var std = []
+
+		function user_input(){
+			var n = prompt("Enter name")
+			var a = prompt("Enter age")
+			var s = prompt("Enter salary")
+			var temp = {
+				name : n,
+				age:a,
+				salary : s
+			}
+			std.push(temp)
+		}
+
+		user_input()
+		user_input()
+
+		function display_data(){
+			var htmlStr = "<table border=1>"
+			for(var i = 0; i < std.length; i++){
+				htmlStr = htmlStr + "<tr><td>"+std[i].name+"</td><td>"+std[i].age+"</td><td>"+std[i].salary+"</td></tr>"
+			}
+			htmlStr = htmlStr + "</table>"
+			document.write(htmlStr)
+		}
+		display_data()
+		/*
+			<table border=1>
+				<tr> <td>Siddhant</td><td>12</td><td>3000</td> </tr>
+				<tr> <td>Anubhav</td><td>13</td><td>4000</td> </tr>
+				<tr> <td>Rajat</td><td>14</td><td>5000</td> </tr>
+			</table>
+		*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

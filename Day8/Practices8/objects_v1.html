@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<script type="text/javascript">
+		var std ={
+			name : "Siddhant",
+			age: "46",
+			contact : {
+				phone : "734892424",
+				email : "sid@gmail.com",
+				address:{
+					state: "MH",
+					city: "Pune",
+					floor: 3
+				}
+			},
+			hobbies:["Reading", "Traveling","Cooking","Singing"],
+
+		}
+		std["contact"].address["city"] = "Mumbai"
+		//Access properties
+		std.contact.address.floor = 4
+		std["contact"]["address"]["floor"] = 4
+		std["contact"].address["floor"] = 4
+		std.hobbies[2]
+		//["Reading", "Traveling","Cooking"]
+			//0           1           2
+		std.hobbies.push("singing")
+
+		//arr = ["a","y","z"] arr[0]
+		var std = [
+			{name: "siddhant", age : 12,salary : 3000}, //0
+			{name: "Anubhav", age : 13,salary : 4000}, //1
+			{name: "Rajat", age : 14,salary : 5000}, //2
+		]
+
+		console.log(std[2]["name"])
+		//{name: "Rajat", age : 14,salary : 5000}
+		std[2].salary = 7000
+		console.log(std[2]["name"]) //
+		std[2].name[1] //Rajat a
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
