@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	<style type="text/css">
+		.block{
+			border : 1px solid black;
+			padding:50px;
+			width:150px;
+		}
+		.big-box{
+			border : 1px solid black;
+			padding:50px;
+			width:200px;	
+			height:200px;	
+		}
+	</style>
+	<script type="text/javascript">
+		function handleClick(){
+			console.log("Clicked")
+		}
+		function func2(){
+			console.log("func2 mouseover")
+			document.getElementById("block").style["background-color"] = "red"
+			document.getElementById("block").classList.add("big-box")
+		}
+		function func3(){
+			console.log("func3 mouseleave")
+			document.getElementById("block").style["background-color"] = "white"
+			document.getElementById("block").classList.remove("big-box")
+		}
+		function func4(){
+			console.log("mouse moved in upward direction")
+		}
+		function func5(){
+			console.log("func5 input focused")
+		}
+		function func6(){
+			console.log("func6 cusror out of input box")
+			var name = document.getElementById("name").value
+			if(name.length < 5){
+				document.getElementById("err").innerHTML = "Name must of at least 5 chars"
+			}else{
+				document.getElementById("err").innerHTML = ""
+			}
+		}
+		function func7(){
+			console.log("Somthing input ")
+		}
+	</script>
+</head>
+<body>
+	<div class="block" id="block" onclick="handleClick()" onmouseover="func2()" onmouseleave="func3()" onmouseup="func4()">
+		Hi
+	</div>
+	<br><br>
+	<button onclick="handleClick()" on>Btn</button>
+	<br><br>
+	Enter name :<input type="text" id="name" onfocus="func5()" onblur="func6()" oninput="func7()">
+	<span id="err"></span>
+
+</body>
+</html>
+<!--
+click
+mouseover
+mouseleave
+mouseenter
+dblclick
+mouseup
+mousedown
+keypress
+submit
+blur
+focusout
+focus
+input
+change
+-->

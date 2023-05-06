@@ -1,0 +1,15 @@
+1.Create a web page and take 3 Movies details  and show in table (Use bootstrap)
+Movies property : Movie Name,Price,Seat
+
+2.Write js code to read movie data from user and show in table(use bootstrap)
+Movie Fields : movieName, actor, release,Movie type(2d,3d,IMAX)(use checkbox), language(Use radio button), show time(Use input type=datetime-local)
+
+3.Write js code to read movie data from user and show in table(use bootstrap) and apply following validation
+Movie Fields : movieName, actor, release,Movie type(2d,3d,IMAX)(use checkbox), language(Use radio button), show time(Use input type=datetime-local)
+a)Movie Name must be of at least 5 characters 
+b)Actor name must be of at 3 chars
+
+4.Use Assignment 2 and complete question 2 and show data in table(Use bootstrap) and apply following validation
+a)Name must be 5 chars
+b)If Tomato Pizza sauce is selected then the user cannot select Supreme Pizza toppings
+c)Delievery Instruction must have at least 5 words

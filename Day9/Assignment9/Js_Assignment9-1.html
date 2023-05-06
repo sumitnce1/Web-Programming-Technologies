@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js_Assignment9-1-Sumit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script>
+        // 1.Create a web page and take 3 Movies details  and show in table (Use bootstrap)
+        // Movies property : Movie Name,Price,Seat
+        var mov = []
+        function movSave() {
+            var mname = document.getElementById("mname").value
+            var mprice_dom_arr = document.getElementsByName("price")
+            var mprice = ""
+            if (mprice_dom_arr[0].checked) {
+                mprice = mprice_dom_arr[0].value
+            } else if (mprice_dom_arr[1].checked) {
+                mprice = mprice_dom_arr[1].value
+            } else if (mprice_dom_arr[2].checked) {
+                mprice = mprice_dom_arr[2].value
+            }
+            else if (mprice_dom_arr[3].checked) {
+                mprice = mprice_dom_arr[3].value
+            }
+        var mseat = document.getElementById("seat").value
+
+        mov.push({
+            name: mname,
+            price: mprice,
+            seat: mseat
+        })
+		}
+
+        function movShow() {
+            var htmlStr = ""
+            for (var i = 0; i < mov.length; i++) {
+                htmlStr += `<tr>
+								<td>${mov[i].name}</td>
+								<td>${mov[i].price}</td>
+								<td>${mov[i].seat}</td>				
+							</tr>`
+            }
+            document.getElementById("table-body").innerHTML = htmlStr
+        }
+    </script>
+</head>
+
+<body class="bg-danger">
+    <div class="container">
+        <div class="row justify-content-evenly align-items-center" style="height:100vh">
+            <div class="col-md-5 bg-info p-5 shadow rounded">
+                <label class="fw-bold fs-5">Choose Movies Name:</label>
+                <select class="form-select mb-3 text-center bg-body-secondary" id="mname">
+                    <option value="none">..Choose Movies Name..</option>
+                    <option value="Bholaa">Bholaa</option>
+                    <option value="Evil Dead Rise">Evil Dead Rise</option>
+                    <option value="Sisu">Sisu</option>
+                    <option value="Pushpa-2">Pushpa-2</option>
+                    <option value="Bahubali-3">Bahubali-3</option>
+                </select>
+                <div class="mb-3">
+                    <label class="form-label me-3 fs-5 fw-bold">Ticket Price:</label> <br>
+                    <input type="radio" name="price" value="250"> 250
+                    <input type="radio" name="price" value="280"> 280
+                    <input type="radio" name="price" value="350"> 350
+                    <input type="radio" name="price" value="450"> 450
+                </div>
+                <div class="mb-3">
+                    <label class="form-label me-3 fs-5 fw-bold">Seat No.</label>
+                    <input class="border-1 rounded-1 w-100 bg-body-secondary p-1" type="text" maxlength="2" size="2" min="1 "max="35"
+                        placeholder="Enter Seat Number (1 to 35)" id="seat">
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success" onclick="movSave()">Save</button>
+                    <button class="btn btn-warning" onclick="movShow()">Show</button>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <table class="table table-hover table-stripped text-white text-center">
+                    <thead class="table-seconadry">
+                        <tr>
+                            <th>Movies Name</th>
+                            <th>Ticket Price</th>
+                            <th>Seat Number</th>
+                        </tr>
+                        <thead>
+                        <tbody id="table-body">
+
+                    <tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

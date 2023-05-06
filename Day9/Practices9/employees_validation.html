@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<style type="text/css">
+		.err{
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		var emp =[]
+
+		function save(){
+			var name = document.getElementById("name").value
+			var email = document.getElementById("email").value
+			var dob = document.getElementById("dob").value
+			var gender_dom_arr = document.getElementsByName('gender') // [{},{},{}]
+			var gender = ""
+			if(gender_dom_arr[0].checked){
+				gender = gender_dom_arr[0].value
+			}else if(gender_dom_arr[1].checked){
+				gender = gender_dom_arr[1].value
+			}else if(gender_dom_arr[2].checked){
+				gender = gender_dom_arr[2].value
+			}
+			var lang_dom_arr = document.getElementsByName("lang") // [{},{},{},{}]
+			var lang = []
+			if(lang_dom_arr[0].checked){
+				lang.push(lang_dom_arr[0].value)
+			}
+			if(lang_dom_arr[1].checked){
+				lang.push(lang_dom_arr[1].value)
+			}
+			if(lang_dom_arr[2].checked){
+				lang.push(lang_dom_arr[2].value)
+			}
+			if(lang_dom_arr[3].checked){
+				lang.push(lang_dom_arr[3].value)
+			}
+
+			if(validate_name() && validate_email()){
+				emp.push({
+					name : name,
+					email : email,
+					dob : dob,
+					gender : gender,
+					lang: lang
+				})
+			}
+					
+			
+			
+		}
+
+		function display(){
+			var htmlStr = ""
+			for(var i = 0; i < emp.length; i++){
+				// htmlStr = htmlStr + "<tr><td>"+emp[i].name+"</td><td>"+emp[i].email+"</td><td>"+emp[i].dob+"</td></tr>"
+				htmlStr = htmlStr + `<tr>
+										<td>${emp[i].name}</td>
+										<td>${emp[i].email}</td>
+										<td>${emp[i].dob}</td>
+										<td>${emp[i].gender}</td>
+										<td>${emp[i].lang}</td>
+									</tr>`
+			}
+			//<tr><td>Siddhant</td><td>sid@gmail.com</td><td>2/3/222</td></tr>
+			//<tr><td>Siddhant</td><td>sid@gmail.com</td><td>2/3/222</td></tr>
+			document.getElementById("table-body").innerHTML = htmlStr
+
+		}
+
+		function validate_name(){
+			var name = document.getElementById("name").value
+			if(name.length < 5){
+				document.getElementById("name_err").innerHTML = "Name must of at least 5 chars"
+				return false
+			}else{
+				document.getElementById("name_err").innerHTML = ""
+				return true
+			}
+		}
+
+		function validate_email(){
+			var email = document.getElementById("email").value
+			if(!email.endsWith("cdac.com")){
+				document.getElementById("email_err").innerHTML = "Email must be of cdac.com"
+				return false
+			}else{
+				document.getElementById("email_err").innerHTML = ""
+				return true
+			}
+		}
+	</script>
+</head>
+<body>
+	Enter Name: <input type="text" id="name" class="name" onblur="validate_name()">
+	<span class="err" id="name_err"></span>
+	<br>
+	Enter email: <input type="email" id="email" onblur="validate_email()">
+	<span class="err" id="email_err"></span>
+	<br>
+	Enter Dob: <input type="date" id="dob"><br>
+	Gender : <input type="radio" name="gender" value="male" >Male
+			<input type="radio" name="gender"  value="female" >Female
+			<input type="radio" name="gender" value="others">Others
+	<br>
+	Language : 
+		<input type="checkbox" name="lang" value="hindi">Hindi
+		<input type="checkbox" name="lang" value="marathi">Marathi
+		<input type="checkbox" name="lang" value="tamil">Tamil
+		<input type="checkbox" name="lang" value="telgu">Telgu
+	<br>
+	<button onclick="save()">Save</button>
+	<button onclick="display()">Show</button>
+	<table border=1>
+		<thead>	
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Date of birth</th>
+				<th>Gender</th>
+				<th>Language</th>
+			</tr>
+		<thead>
+		<tbody id="table-body">
+			
+		<tbody>
+	</table>
+
+</body>
+</html>
+
+<!--
+-->

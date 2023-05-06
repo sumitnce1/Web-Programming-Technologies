@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js_Assignment9-3-Sumit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <!-- 3.Write js code to read movie data from user and show in table(use bootstrap) and apply following validation
+Movie Fields : movieName, actor, release,Movie type(2d,3d,IMAX)(use checkbox), language(Use radio button), show time(Use input type=datetime-local)
+a)Movie Name must be of at least 5 characters 
+b)Actor name must be of at 3 chars -->
+<style>
+    .err{
+			color: #fa2323;
+            font-weight: 700;
+		}
+</style>
+    <script>
+        var mov = []
+        function movSave() {
+            var mname = document.getElementById("mname").value
+            var aname = document.getElementById("actname").value            
+            var reldate = document.getElementById("reldate").value
+            var mov_dom_arr = document.getElementsByName("mtype")
+			var movType = []
+			if(mov_dom_arr[0].checked){
+				movType.push(mov_dom_arr[0].value)
+			}
+			if(mov_dom_arr[1].checked){
+				movType.push(mov_dom_arr[1].value)
+			}
+			if(mov_dom_arr[2].checked){
+				movType.push(mov_dom_arr[2].value)
+			}
+
+            var mlang_dom_arr = document.getElementsByName("mlang")
+            var movlang = ""
+            if (mlang_dom_arr[0].checked) {
+                movlang = mlang_dom_arr[0].value
+            } else if (mlang_dom_arr[1].checked) {
+                movlang = mlang_dom_arr[1].value
+            } else if (mlang_dom_arr[2].checked) {
+                movlang = mlang_dom_arr[2].value
+            }
+            else if (mlang_dom_arr[3].checked) {
+                movlang = mlang_dom_arr[3].value
+            }
+        var showtime = document.getElementById("showtime").value    
+        var mseat = document.getElementById("seat").value
+        
+        if(validate_movname() && validate_actname()){
+        mov.push({
+            name: mname,
+            actname: aname,
+            reldate: reldate,
+            mtype: movType,
+            lang: movlang,
+            showtime: showtime,
+            seat:mseat            
+             })
+        }
+		}
+
+        function movShow() {
+            var htmlStr = ""
+            for (var i = 0; i < mov.length; i++) {
+                htmlStr += `<tr>
+								<td>${mov[i].name}</td>
+                                <td>${mov[i].actname}</td>
+                                <td>${mov[i].reldate}</td>
+                                <td>${mov[i].mtype}</td>
+								<td>${mov[i].lang}</td>
+								<td>${mov[i].showtime}</td>				
+                                <td>${mov[i].seat}</td>	
+							</tr>`
+            }
+            document.getElementById("table-body").innerHTML = htmlStr
+        }
+
+        function validate_movname(){
+			var name = document.getElementById("mname").value
+			if(name.length < 5){
+				document.getElementById("mov_name_err").innerHTML = "Movie Name must of at least 3 Charcter."
+				return false
+			}else{
+				document.getElementById("mov_name_err").innerHTML = ""
+				return true
+			}
+		}
+        function validate_actname(){
+			var name = document.getElementById("actname").value
+			if(name.length <3){
+				document.getElementById("act_name_err").innerHTML = "Actor Name must of at least 3 Charcter."
+				return false
+			}else{
+				document.getElementById("act_name_err").innerHTML = ""
+				return true
+			}
+		}
+    </script>
+</head>
+
+<body class="bg-danger">
+    <div class="container">
+        <div class="row justify-content-evenly align-items-center" style="height:100vh">
+            <div class="col-md-4 bg-info p-5 shadow rounded">
+                <div class="mb-1">
+                    <label class="form-label me-3 fs-5 fw-bold">Movie Name:</label>
+                    <input class="border-1 rounded-1 w-100 bg-body-secondary p-1" type="text"
+                        placeholder="Enter Movies Name" id="mname" onblur="validate_movname()">
+                        <small class="err" id="mov_name_err"></small>
+                </div>
+                <div class="mb-1">
+                    <label class="form-label me-3 fs-5 fw-bold">Actor Name:</label>
+                    <input class="border-1 rounded-1 w-100 bg-body-secondary p-1" type="text"
+                        placeholder="Enter Actor Name" id="actname" onblur="validate_actname()">
+                        <small class="err" id="act_name_err"></small>
+                </div>
+                <div class="mb-1">
+                    <label class="form-label me-3 fs-5 fw-bold">Release Date:</label>
+                    <input class="border-1 rounded-1 w-100 bg-body-secondary p-1" type="date" id="reldate">
+                </div>
+                <div class="mb-1">
+				 	<label class="form-label me-3 fs-5 fw-bold">Movies Type:</label>
+					<input type="checkbox" name="mtype" value="2D"> 2D
+					<input type="checkbox" name="mtype" value="3D"> 3D
+					<input type="checkbox" name="mtype" value="IMAX"> IMAX
+				</div>
+                <div class="mb-1">
+                    <label class="form-label me-3 fs-5 fw-bold">Language:</label> <br>
+                    <input type="radio" name="mlang" value="Hindi"> Hindi
+                    <input type="radio" name="mlang" value="English"> English
+                    <input type="radio" name="mlang" value="Marathi"> Marathi
+                    <input type="radio" name="mlang" value="Telgu"> Telgu
+                </div>
+                <div class="mb-1">
+                    <label class="form-label me-3 fs-5 fw-bold">Show Time:</label>
+                    <input class="border-1 rounded-1 w-100 bg-body-secondary p-1" type="datetime-local" id="showtime">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label me-3 fs-5 fw-bold">Seat No.</label>
+                    <input class="border-1 rounded-1 w-100 bg-body-secondary p-1" type="text" maxlength="2" size="2" min="1 "max="35"
+                        placeholder="Enter Seat Number (1 to 35)" id="seat">
+                </div>
+
+                <div class="text-center mb-5">
+                    <button class="btn btn-success" onclick="movSave()">Save</button>
+                    <button class="btn btn-warning" onclick="movShow()">Show</button>
+                </div>
+                <p class="text-center text-white fw-bold">Design by &copy; Sumit</p>
+            </div>
+            <div class="col-md-8 gy-5">
+                <table class="table table-bordered table-hover table-stripped text-white text-center">
+                    <thead class="table-seconadry">
+                        <tr>
+                            <th>Movies Name</th>
+                            <th>Actor Name:</th>
+                            <th>Release Date</th>
+                            <th>Movies Type</th>
+                            <th>Language</th>
+                            <th>Show Time</th>
+                            <th>Seat No.</th>
+                        </tr>
+                        <thead>
+                        <tbody id="table-body">
+
+                    <tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

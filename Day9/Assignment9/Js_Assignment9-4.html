@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    <title>Js_Assignment9-4-Sumit</title>
+    <!-- 4.Use Assignment 2 and complete question 2 and show data in table(Use bootstrap) and apply following validation
+    a)Name must be 5 chars
+    b)If Tomato Pizza sauce is selected then the user cannot select Supreme Pizza toppings
+    c)Delievery Instruction must have at least 5 words -->
+    <style>
+        .err{
+                color: #fa2323;
+                font-weight: 700;
+            }
+    </style>
+    <script>
+         var piza = []
+        function pizaSave() {
+            var name = document.getElementById("name").value
+            var piza_dom_arr = document.getElementsByName("pizamenu")
+            var pizaMenu = ""
+            if (piza_dom_arr[0].checked) {
+                pizaMenu = piza_dom_arr[0].value
+            } else if (piza_dom_arr[1].checked) {
+                pizaMenu = piza_dom_arr[1].value
+            } else if (piza_dom_arr[2].checked) {
+                pizaMenu = piza_dom_arr[2].value
+            }
+            var pizaSouce = document.getElementById("pizzasauce").value
+            // Option Extra Validation
+            var optextra_dom_arr = document.getElementsByName("optextra")
+			var optExtra = []
+			if(optextra_dom_arr[0].checked){
+				optExtra.push(optextra_dom_arr[0].value)
+			}
+			if(optextra_dom_arr[1].checked){
+				optExtra.push(optextra_dom_arr[1].value)
+			}   
+        var delvText = document.getElementById("delvtext").value
+        
+        if(validate_name() && validate_delvtext()){
+        piza.push({
+            name: name,
+            pizamenu: pizaMenu,
+            pizasouce: pizaSouce,
+            optextra: optExtra,  
+            delvtext: delvText
+             })
+        }
+		}
+        function pizaShow() {
+            var htmlStr = ""
+            for (var i = 0; i < piza.length; i++) {
+                htmlStr += `<tr>
+								<td>${piza[i].name}</td>
+                                <td>${piza[i].pizamenu}</td>
+                                <td>${piza[i].pizasouce}</td>
+                                <td>${piza[i].optextra}</td>
+								<td>${piza[i].delvtext}</td>
+							</tr>`
+            }
+            document.getElementById("table-body").innerHTML = htmlStr
+        }
+        //Validate tomato with supreme
+        // function supdes() {
+        // var sauce = document.getElementById("pizzasauce").value;
+        // if (sauce == "Tomato" ) {
+        //     document.getElementById("sup").disabled = true;            
+        //     document.getElementById("tomoto_err").innerHTML = "Tomato and Supreme can't be seleted both."
+            
+        // }
+        //  else{
+        //     document.getElementById("sup").disabled = false;
+        //     document.getElementById("tomoto_err").innerHTML = ""
+        // }
+        // }
+        function supdes(){
+            var sauce = document.getElementById("pizzasauce").value;
+            var superme= document.getElementById("sup").checked
+            if(sauce== "Tomato" && superme){
+                document.getElementById("sup").disabled = true;  
+                document.getElementById("tomoto_err").innerHTML = "Tomato and Supreme can't be seleted both."
+            }else{
+                document.getElementById("sup").disabled = false;
+                document.getElementById("tomoto_err").innerHTML = ""
+            }
+        }
+        var sec = document.getElementsByName("pizamenu").value= true
+        if(sec==="Tomoto"){
+            console.log("Here reach")
+            document.getElementById("tomoto_err").innerHTML = ""
+        }
+
+        function validate_name(){
+			var name = document.getElementById("name").value
+			if(name.length <5){
+				document.getElementById("name_err").innerHTML = "Name must of at least 3 Charcter."
+				return false
+			}
+            else{
+				document.getElementById("name_err").innerHTML = ""
+				return true
+			}
+		}
+        // function validate_delvtext(){
+		// 	var name = document.getElementById("delvtext").value
+		// 	if(name.length <5){
+		// 		document.getElementById("delv_err").innerHTML = "Delivery Instructions must of at least 5 Words."
+		// 		return false
+		// 	}else{
+		// 		document.getElementById("delv_err").innerHTML = ""
+		// 		return true
+		// 	}
+		// }
+        function validate_delvtext() {
+        var instructions = document.getElementById("delvtext").value;
+        var words = instructions.split(" ").filter(function (word) {
+            return word.trim() !== "";
+        });
+
+        if (words.length < 5) {
+            document.getElementById("delv_err").innerHTML = "Delivery Instructions must have at least 5 words.";
+            return false;
+        } else {
+            document.getElementById("delv_err").innerHTML = "";
+            return true;
+        }
+        }
+    </script>
+</head>
+<body class="bg-danger">
+    <div class="container">
+        <div class="row  justify-content-evenly align-items-center p-2" style="height:100vh">
+            <!-- left side clolum start -->
+            <div class="col-md-6">
+            <div class="brdouter p-3 border border-2 border-info bg-info rounded-5" style="width: 550px;">
+                <div class="row">
+                    <div class="col-md-12 text-center mt-3 mb-2">
+                        <h3 style="font-family: cursive" class="fw-bold">Pizza Shop 2.0</h3> <hr>
+                    </div>
+                </div>
+                <div class="row mb-1 mt-2">
+                    <div class="col-md-6">
+                        <label class="form-label me-3 fs-6 fw-bold">Name</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control bg-warning-subtle" type="text" name="" id="name" placeholder="Enter name" onblur="validate_name()">
+                        <small class="err" id="name_err"></small>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6"> <br>
+                        <label class="form-label fs-6 fw-bold">Pizza Topping</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="radio" name="pizamenu" value="Supreme" id="sup" onchange="supdes()"> Supreme  <br>
+                        <input type="radio" name="pizamenu" value="Vegetarian" id="veg" onchange="supdes()"> Vegetarian <br>
+                        <input type="radio" name="pizamenu" value="Hawaiian" id="hawa" onchange="supdes()"> Hawaiian
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <label class="form-label fs-6 fw-bold">Pizza Souce</label>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select mb-1 text-center bg-warning-subtle" id="pizzasauce" onchange="supdes()">
+                            <option value="none">..Choose..</option>
+                            <option value="Tomato">Tomato</option>
+                            <option value="Chili">Chili</option>
+                            <option value="HawaiianFLV">HawaiianFLV</option>
+                        </select>
+                        <small class="err" id="tomoto_err"></small>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <label class="form-label fs-6 fw-bold">Optional Extras</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" name="optextra" value="Extra Chese"> Extra Chese
+					    <input type="checkbox" name="optextra" value="Gluten Free Base"> Gluten Free Base
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label class="form-label fs-6 fw-bold">Delivery Instructions:</label>
+                            <textarea class="form-control bg-warning-subtle" id="delvtext" rows="3" onblur="validate_delvtext()" placeholder="Type here instructions"></textarea>
+                            <small class="err" id="delv_err"></small>
+                          </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <div class="text-center mb-5">
+                            <button class="btn btn-success" onclick="pizaSave()">Save Order</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center mb-5">
+                            <button class="btn btn-warning" onclick="pizaShow()">Show Data</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- Left side column close -->
+        <!-- Right side clolum start -->
+        <div class="col-md-6 gy-5 ">
+            <table class="table table-bordered table-hover table-stripped text-white text-center">
+                <thead class="table-seconadry">
+                    <tr>
+                        <th>Name</th>
+                        <th>Piza Topping:</th>
+                        <th>Pizza Souce</th>
+                        <th>Optional Extras</th>
+                        <th>Delv. Inst.</th>
+                    </tr>
+                    <thead>
+                    <tbody id="table-body">
+
+                <tbody>
+            </table>
+        </div><!-- Right side clolum close -->
+        
+        </div>
+    </div>
+</body>
+</html>
