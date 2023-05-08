@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>JQuery_Assign1-10-Sumit</title>
+    <script>
+        function add() {
+            var num1 = $('#num1').val();
+            var num2 = $('#num2').val();
+            var result = Number(num1) + Number(num2);
+            // $('#data').html(result);
+            $("#data").html("Result is " + result)
+        }
+
+        function sub() {
+            var num1 = $('#num1').val();
+            var num2 = $('#num2').val();
+            var result = Number(num1) - Number(num2);
+            document.getElementById("data").innerHTML = result;
+        }
+
+        function mul() {
+            var num1 = $('#num1').val();
+            var num2 = $('#num2').val();
+            var result = Number(num1) * Number(num2);
+            $('#data').html(result);
+        }
+
+        function div() {
+            var num1 = $('#num1').val();
+            var num2 = $('#num2').val();
+            var result = Number(num1) / Number(num2);
+            $('#data').html(result);
+        }
+        function mod() {
+            var num1 = $('#num1').val();
+            var num2 = $('#num2').val();
+            var result = Number(num1) % Number(num2);
+            $('#data').html(result);
+        }
+    </script>
+</head>
+<body>
+    Enter 1st Number: <input type="text" name="" id="num1"> <br> <br>
+    Enter 2nd Number: <input type="text" name="" id="num2"> <br><br>
+    <button onclick="add()">Addition</button>
+    <button onclick="sub()">Subtraction</button>
+    <button onclick="mul()">Multiplication</button>
+    <button onclick="div()">Division</button>
+    <button onclick="mod()">Modulas</button>
+
+    <h1 id="data">Show Result</h1>
+</body>
+</html>

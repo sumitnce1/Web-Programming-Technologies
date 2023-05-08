@@ -1,0 +1,18 @@
+1.Write a calculator program.Create two input box and five button add,substract,multiply divide, modulas
+
+2.Write a code to accept name of Friends name from user and show in list using DOM
+3.Create a web page and take 3 Movies details  and show in table
+Movies property : Movie Name,Price,Seat
+
+4.Write js code to read movie data from user and show in table(use bootstrap)
+Movie Fields : movieName, actor, release,Movie type(2d,3d,IMAX)(use checkbox), language(Use radio button), show time(Use input type=datetime-local)
+_____________________________________________________________________________________________________________
+5.Write js code to read movie data from user and show in table(use bootstrap) and apply following validation
+Movie Fields : movieName, actor, release,Movie type(2d,3d,IMAX)(use checkbox), language(Use radio button), show time(Use input type=datetime-local)
+a)Movie Name must be of at least 5 characters 
+b)Actor name must be of at 3 chars
+
+6.Use Assignment 2 and complete question 2 and show data in table(Use bootstrap) and apply following validation
+a)Name must be 5 chars
+b)If Tomato Pizza sauce is selected then the user cannot select Supreme Pizza toppings
+c)Delievery Instruction must have at least 5 words

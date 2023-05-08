@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>JQuery_Assign3-10-Sumit</title>
+    <!--3.Create a web page and take 3 Movies details  and show in table
+    Movies property : Movie Name,Price,Seat -->
+    <script>        
+      var mov = [];
+      function addMov(){
+        var movName = $('#name').val();
+        var movPrice = $('#price').val();
+        var movSeat = $('#seat').val()
+
+        var temp = {
+          name: movName,
+          price: movPrice,
+          seat: movSeat,
+        };
+        mov.push(temp);
+        clr();
+      }
+
+      function display_Mov(){
+      var htmlStr = "<table border=1 cellspacing=0>"
+		for(var i = 0; i < mov.length; i++){
+			htmlStr = htmlStr + "<tr><td>"+mov[i].name+"</td><td>"+mov[i].price+"</td><td>"
+                +mov[i].seat+"</td></tr>"
+		}
+		htmlStr = htmlStr + "</table>"
+        $('#data').html(htmlStr);
+    }
+    function clr(){
+        $('#name').val("");
+        $('#price').val("");
+        $('#seat').val("");
+    }
+    </script>
+  </head>
+  <body>
+    Enter Movie Name: <input type="text" name="" id="name"> <br>
+    Enter Movie Price: <input type="text" name="" id="price"><br>
+    Enter Movie SeatNO.: <input type="text" name="" id="seat"><br>
+    <button onclick="addMov()">Save</button>
+    <button onclick="display_Mov()">Show</button> <br><br>
+    <div id="data"></div>
+  </body>
+</html>

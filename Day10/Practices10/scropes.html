@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scopes</title>
+	<script type="text/javascript">
+		//var, let const
+		//Three types of scopes
+		//1.Global scope, var,let,const : accessible everywhere
+		//2.Function scope : created by function, var,let,const
+		//3.Block scope : create by {} ,let,const
+
+		function printData(){
+			var a = 100;
+			let b = 200;
+			const c = 400;
+			if(true){
+				var x = 300;
+				let y = 400;
+				const z = 500;
+				
+			}
+			console.log("x :",x)
+			//console.log("y :",y)
+			//console.log("z :",z)
+
+		}
+		printData()
+		//console.log("a :", a)
+		//console.log("b :", b)
+		//console.log("c :", c)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

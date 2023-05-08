@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions Types</title>
+	<script type="text/javascript">
+		//3 types of function
+		//1.Normal function
+		function sum(a,b){
+			var result = a + b
+			return result
+		}
+		var res = sum(10,20)
+		//2.Anonymous function : function without name, use it as callback, assign to variable and use as normal function
+		var xyz = function (a,b){
+			var result = a + b
+			return result
+		}
+		var res = xyz(10,20)
+
+		//3.Arrow function : function without name and have short syntax for oneliner(lambda), callback, assign to variable and use as normal function, oneliner function
+		var abc = (a,b) => {
+			var result = a + b
+			return result
+		}
+		var res = abc(10,20)
+		var sqr = a =>{ // for single argument,() are not needed
+			var result = a * a
+			return result
+		}
+		var res = sqr(20)
+		//if arrow function have single statement and that is return statement
+		
+		var sum = (a,b) => a + b
+		var res = sum(10,20)
+		
+		var sqr = a => a*a
+		var res = sqr(30)
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

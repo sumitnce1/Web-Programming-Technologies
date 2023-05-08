@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var emp =[]
+
+		function save(){
+			var name = $("#name").val()
+			var email = $("#email").val()
+			var dob = $("#dob").val()
+			var gender = $('input[name="gender"]:checked').val()
+
+			var lang = []
+			$('input[name="lang"]:checked').each(function(){
+				lang.push($(this).val())
+			})
+
+			emp.push({
+				name : name,
+				email : email,
+				dob : dob,
+				gender : gender,
+				lang: lang
+			})
+		}
+
+		function display(){
+			var htmlStr = ""
+			for(var i = 0; i < emp.length; i++){
+				// htmlStr = htmlStr + "<tr><td>"+emp[i].name+"</td><td>"+emp[i].email+"</td><td>"+emp[i].dob+"</td></tr>"
+				htmlStr = htmlStr + `<tr>
+										<td>${emp[i].name}</td>
+										<td>${emp[i].email}</td>
+										<td>${emp[i].dob}</td>
+										<td>${emp[i].gender}</td>
+										<td>${emp[i].lang}</td>
+									</tr>`
+			}
+			//<tr><td>Siddhant</td><td>sid@gmail.com</td><td>2/3/222</td></tr>
+			//<tr><td>Siddhant</td><td>sid@gmail.com</td><td>2/3/222</td></tr>
+			//document.getElementById("table-body").innerHTML = htmlStr
+			$("#table-body").html(htmlStr)
+
+		}
+
+		$(document).ready(function(){
+			$("#save-btn").click(save)
+			$("#display-btn").click(display)
+		})
+
+	</script>
+</head>
+<body>
+	Enter Name: <input type="text" id="name" class="name"><br>
+	Enter email: <input type="email" id="email"><br>
+	Enter Dob: <input type="date" id="dob"><br>
+	Gender : <input type="radio" name="gender" value="male" >Male
+			<input type="radio" name="gender"  value="female" >Female
+			<input type="radio" name="gender" value="others">Others
+	<br>
+	Language : 
+		<input type="checkbox" name="lang" value="hindi">Hindi
+		<input type="checkbox" name="lang" value="marathi">Marathi
+		<input type="checkbox" name="lang" value="tamil">Tamil
+		<input type="checkbox" name="lang" value="telgu">Telgu
+	<br>
+	<button id="save-btn">Save</button>
+	<button id="display-btn">Show</button>
+	<table border=1>
+		<thead>	
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Date of birth</th>
+				<th>Gender</th>
+				<th>Language</th>
+			</tr>
+		<thead>
+		<tbody id="table-body">
+			
+		<tbody>
+	</table>
+
+</body>
+</html>

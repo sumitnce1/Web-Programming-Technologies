@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OOps</title>
+	<script type="text/javascript">
+
+		var s1 = {
+			name:"Siddhant",
+			prn:1,
+			marks:80,
+			getGrade : function(){
+				if(this.marks > 80){
+					return "A"
+				}else {
+					return "F"
+				}
+			}
+		}
+		var s2 = {
+			name:"Siddhant",
+			prn:2,
+			marks:80,
+			getGrade : function(){
+				if(this.marks > 80){
+					return "A"
+				}else {
+					return "F"
+				}
+			}
+		}
+
+		// function Student(){
+		// 	var x = 100;
+		// 	this.name = ""
+		// 	this.prn=""
+		// 	this.phone=""
+		// 	this.marks=0
+		// 	this.getGrade = function(){
+		// 		if(this.marks > 80){
+		// 			return "A"
+		// 		}else {
+		// 			return "F"
+		// 		}
+		// 	}
+		// }
+
+		// var std1 = new Student()
+		// var std2 = new Student()
+		// var std3 = new Student()
+		// //Student() //normal function call
+		// console.log(std1.name)
+		// std1.name="Siddhant"
+		// std2.name="Anubhav"
+		// std1["prn"] = 1
+		// std1.email = "sid@gmail.com"
+		// delete std1.marks
+		// std1.getGrade()
+		// console.log(std1)
+		// console.log(std2)
+		function Student(prn,name,marks){
+			this.name = name
+			this.prn = prn
+			this.marks = marks
+			this.getGrade = function(){
+				if(this.marks > 80){
+					return "A"
+				}else{
+					return "F"
+				}
+			}	
+		}
+		var std1 = new Student(1, "Siddhant", 100)
+		var std2 = new Student(2, "Anubhav", 80)
+		var std3 = new Student(3, "Rajat", 70)
+		console.log(std1)
+		console.log(std2)
+		console.log(std3)
+		console.log(std1.getGrade())
+	</script>
+</head>
+<body>
+
+</body>
+</html>

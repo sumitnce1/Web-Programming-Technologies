@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class syntax</title>
+	<script type="text/javascript">
+		// class Student{
+		// 	constructor(){ // constructor name must be constructor
+		// 		this.name =""
+		// 		this.prn = ""
+		// 		this.marks=0
+		// 		this.getGrade = function(){
+		// 			if(this.marks > 80){
+		// 				return "A"
+		// 			}else {
+		// 				return "F"
+		// 			}
+		// 		}
+		// 	}
+		// }
+		// var std1 = new Student()
+		// var std2 = new Student()
+		// var std3 = new Student()
+		// std1.name = "Siddhant"
+		// console.log(std1.name)
+		// std1.phone = "3247823"
+		// delete std1.prn
+		// std2.name="Anubhav"
+		// console.log(std1)
+		// console.log(std2)
+		class Student{
+			constructor(prn, name,marks){
+				this.prn = prn
+				this.name = name
+				this.marks = marks
+				
+			}
+			getGrade(){
+					if(this.marks > 80){
+						return "A"
+					}else {
+						return "F"
+					}
+			}
+		}
+		var std1 = new Student(1, "Siddhant", 100)
+		var std2 = new Student(2, "Anubhav", 80)
+		var std3 = new Student(3, "Rajat", 70)
+		console.log(std1)
+		console.log(std2)
+		console.log(std3)
+		console.log(std1.getGrade())
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>JQuery_Assign2-10-Sumit</title>
+    <!-- 2.Write a code to accept name of Friends name from user and show in list using DOM -->
+    <script>        
+      var friList = [];
+      
+      function add_friends_list(){        
+        var friName = $('#name').val();
+        var temp = {
+          name: friName,
+        };
+        friList.push(temp);
+      }
+
+    function display_list(){
+      var htmlStr = "<ol>"
+		for(var i = 0; i < friList.length; i++){
+			htmlStr = htmlStr + "<li>"+friList[i].name+"</li>"
+		}
+		htmlStr = htmlStr + "</ol>";
+		$('#data').html(htmlStr);
+    }
+    </script>
+  </head>
+  <body>
+    Enter Friends Name: <input type="text" name="" id="name">
+    <button onclick="add_friends_list()">Save</button>
+    <button onclick="display_list()">Show</button>
+    <h3 id="data"></h3>
+</body>
+  </body>
+</html>
