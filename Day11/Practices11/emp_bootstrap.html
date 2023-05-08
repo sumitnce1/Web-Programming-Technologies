@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Employee</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<style type="text/css">
+		.err{
+			color: red;
+		}
+</style>
+<script type="text/javascript">
+		var emp=[]
+		function save(){
+			var name = document.getElementById("name").value
+			var email = document.getElementById("email").value
+			var dob = document.getElementById("dob").value
+			var gender_dom_arr = document.getElementsByName("gender")
+			var gender = ""
+			if(gender_dom_arr[0].checked){
+				gender = gender_dom_arr[0].value
+			}else if(gender_dom_arr[1].checked){
+				gender = gender_dom_arr[1].value
+			}else if(gender_dom_arr[2].checked){
+				gender = gender_dom_arr[2].value
+			}
+			var lang_dom_arr = document.getElementsByName("lang")
+			var lang = []
+			if(lang_dom_arr[0].checked){
+				lang.push(lang_dom_arr[0].value)
+			}
+			if(lang_dom_arr[1].checked){
+				lang.push(lang_dom_arr[1].value)
+			}
+			if(lang_dom_arr[2].checked){
+				lang.push(lang_dom_arr[2].value)
+			}
+			if(lang_dom_arr[3].checked){
+				lang.push(lang_dom_arr[3].value)
+			}
+			var state = document.getElementById("state").value
+			emp.push({
+				name : name,
+				email : email,
+				dob: dob,
+				lang : lang,
+				gender : gender,
+				state: state
+			})
+		}
+
+		function show(){
+			var htmlStr= ""
+			for (var i = 0; i < emp.length; i++) {
+				htmlStr += `<tr>
+								<td>${emp[i].name}</td>
+								<td>${emp[i].email}</td>
+								<td>${emp[i].dob}</td>
+								<td>${emp[i].gender}</td>
+								<td>${emp[i].lang}</td>
+								<td>${emp[i].state}</td>
+							</tr>`
+			}
+			document.getElementById("table-body").innerHTML = htmlStr
+			$("#table-block").show()
+		}
+
+		$(document).ready(function(){
+			$("#table-block").hide()
+		})
+
+</script>
+</head>
+<body class="bg-success">
+	<div class="container-fluid">
+		<div class="row justify-content-evenly align-items-center" style="height:100vh">
+			<div class="col-5 bg-white p-5 shadow rounded">
+				<input class="form-control mb-3" type="text" id="name" placeholder="Enter Name">
+				<input class="form-control mb-3" type="email" id="email" placeholder="Enter Email">
+				
+				<label class="form-label">Date of birth</label>
+				<input class="form-control mb-3" type="date" id="dob">
+				<div class="mb-3">
+					<label class="form-label me-3">Gender</label>
+					<input type="radio" name="gender" value="male" > Male
+					<input type="radio" name="gender"  value="female" > Female
+					<input type="radio" name="gender" value="others"> Others
+				</div>
+				<div class="mb-3">
+					<label class="form-label me-3">Language</label>
+					<input type="checkbox" name="lang" value="hindi"> Hindi
+					<input type="checkbox" name="lang" value="marathi"> Marathi
+					<input type="checkbox" name="lang" value="tamil"> Tamil
+					<input type="checkbox" name="lang" value="telgu"> Telgu
+				</div>
+				<select class="form-select mb-3" id="state">
+					<option value="none">Select State</option>
+					<option value="mh">MH</option>
+					<option value="up">up</option>
+					<option value="dl">DL</option>
+					<option value="tn">TN</option>
+					<option value="hp">HP</option>
+				</select>
+				<div class="text-center">
+					<button class="btn btn-primary" onclick="save()">Save</button>
+					<button class="btn btn-primary" onclick="show()">Show</button>
+				</div>
+			</div>
+			<div class="col-6" id="table-block">
+				<table class="table table-hover table-stripped text-white">
+					<thead class="table-seconadry">	
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Date of birth</th>
+							<th>Gender</th>
+							<th>Language</th>
+							<th>State</th>
+						</tr>
+					<thead>
+					<tbody id="table-body">
+						
+					<tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

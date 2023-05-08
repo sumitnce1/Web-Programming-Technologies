@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+		function save(){
+			var name = $("#name").val()
+			//$("#list").append(`<li>${name}</li>`)
+			$("#list").prepend(`<li>${name}</li>`)
+		}
+
+		$(document).ready(function(){
+			$("#save-btn").click(save)
+		})
+	</script>
+</head>
+<body>
+	Enter name: <input type="text" id="name" name="">
+	<button id="save-btn">Add to List</button>
+	<ol id="list">
+		<li>Siddhant</li>	
+		<li>Anubhav</li>	
+	</ol>
+</body>
+</html>

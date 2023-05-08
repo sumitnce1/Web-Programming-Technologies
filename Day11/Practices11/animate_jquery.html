@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<title></title>
+	<style type="text/css">
+		.block{
+			border: 1px solid black;
+			width : 100px;
+			height : 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="block">Hi</div>
+	<button id="animate-btn">Animate</button>
+	<script type="text/javascript">
+		$("#animate-btn").click(function(){
+			$(".block").animate({height:"+=100",width:"+=100"},5000,"swing",function(){
+				$(".block").animate({height:"100px",width:"100px"},5000)
+			})
+		})
+		$(".block").mouseover(function(){
+			$(".block").animate({"margin-left":"70vw"},5000)
+		})
+	</script>
+</body>
+</html>

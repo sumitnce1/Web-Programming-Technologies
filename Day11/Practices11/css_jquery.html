@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		
+
+		function validateName(){
+			var name = $("#name").val()
+			if(name.length<5){
+				$("#name-err").html("Name must be of at leats 5 chars")
+				$("#name-err").css("color","red")
+				$("#name").css({border : "2px solid red"})
+				return false
+			}else{
+				$("#name-err").html("")
+				$("#name").css({border : "2px solid green"})
+				return true
+			}
+		}
+
+		$(document).ready(function(){
+			$("#save-btn").click(function (){
+				var name = $("#name").val()
+				//$("#list").append(`<li>${name}</li>`)
+				if(validateName()){
+					$("#list").prepend(`<li>${name}</li>`)	
+				}
+				
+			})
+			$("#save-btn").focusout(validateName)
+		})
+	</script>
+</head>
+<body>
+	Enter name: <input type="text" id="name" name="">
+	<span id="name-err"></span>
+	<br>
+	<button id="save-btn">Add to List</button>
+	<ol id="list">
+		<li>Siddhant</li>	
+		<li>Anubhav</li>	
+	</ol>
+</body>
+</html>
