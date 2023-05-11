@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Object</title>
+	<script type="text/javascript">
+		var dt = new Date() // date object of current date
+		console.log(dt)
+		console.log(dt.getDay()) // Week day
+		console.log(dt.getFullYear())
+		console.log(dt.getMonth())
+		console.log(dt.getDate()) // Date
+		console.log(dt.getHours())
+		console.log(dt.getMinutes())
+		console.log(dt.getSeconds())
+		dt.setDate(10)
+		dt.setHours(15)
+		console.log(dt)
+		console.log(dt.toString())
+		console.log(dt.toLocaleString())
+		console.log(dt.toISOString())
+			// year to millisecond
+		var new_dt = new Date(2024,4,30,14)
+		console.log(new_dt)
+
+		var diff = new_dt.getTime() - dt.getTime()
+		console.log(diff/(1000*60*60*24))
+		//moment.js , date-fns.js
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RegEx</title>
+	<script type="text/javascript">
+		//Pattern matching
+		/*
+			^ -> line starting with
+			$ -> line ending with
+			.  -> any character
+			* -> zero or more occurance
+			+ -> one or more occurances
+			{} -> exact occurance
+			| -> or
+			[] -> range
+			() -> grouping
+			/d -> only digit allowed
+			/D -> non digit chars
+			\w -> word
+			\W -> not word
+
+
+			function:
+			match
+			matchAll
+			replace
+			replaceAll
+		*/
+		var str = "Ab.xy computer is a machine that can be programmed sisasd12ad to carry out"
+		var num = "MH10AA2347"
+		// console.log(str.match(/machine/))
+		// console.log(str.match(/^Ab\.*/))
+		// console.log(str.match(/^\D/))
+		// console.log(str.match(/^Abc+/))
+		// console.log(str.match(/^Abc{3}/))
+		// console.log(str.match(/^Abc.d/))
+		//console.log(str.match(/^Abc..o/))
+//console.log(str.match(/^Ab[b-xJ-X0-9]..o/))
+//console.log(str.match(/^Ab[bzw]..o/))
+//console.log(str.match(/^Abc(xy){2}/))
+//console.log(str.match(/\\<s.+[0-3]{2}ad\\>/))
+//console.log(str.match(/s.+[0-3]{2}ad/))
+// console.log(str.match(/s.+[0-3]{2}ad/))
+// console.log(str.match(/s.+\D{2}ad.*oux$/))
+// console.log(str.match(/s.+\D{2}ad.*oux$/))
+		console.log(num.match(/^MH.*/))
+		console.log(num.match(/^MH10.*/))
+		var email = "Sid@cdac.in"
+//console.log(email.match(/^[a-zA-Z][0-9a-zA-Z]*@[a-zA-Z0-9].com$/))
+console.log(email.match(/^[a-zA-Z][0-9a-zA-Z]*@(cdac.com|cdac.in)$/))
+	console.log(num.replace(/^MH10.*/,"UP20"))
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+Use modules:
+Dont take input from user
+1.Write a code to print fibonacci number till 100
+2.Write a code to write table of 3 to file
+3.Read data from file(create a dummy file and write some data in it)
+____________________________________________________________
+4.Write a code to read list of numbers from file and perform addition and write into another file
+(Create two file ,First file have comma seperated numbers )
+
+5.Create a user defined local module greeting.js containing a function greet() that greets user based on time
+of the day. If its morning, greet user as "Good morning", if its afternoon, greet user as "Good
+Afternoon" else as "Good Evening"
+Create a main module that will bring in the greeting.js module and invoke the greet function
+
