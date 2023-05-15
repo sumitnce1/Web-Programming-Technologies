@@ -1,0 +1,97 @@
+URL:
+http://[HOSTNAME]:[PORT]/PATH?QUERY_STRING
+
+example:
+http://www.google.com
+Hostname : www.google.com
+Port: 80
+PATH: /
+
+http://www.google.com:5000
+Hostname : www.google.com
+Port: 5000
+Path: /
+
+http://www.google.com:5000/data
+Hostname: www.google.com
+Port: 5000
+Path : /data
+
+http://example.com/data
+Hostname : example.com
+Port : 80
+Path : /data
+
+http://example.com/data?a=10&b=30
+Hostname : example.com
+Port : 80
+Path : /data
+Querystring: a=10&b=20
+
+http://localhost/data?a=10&b=30
+Hostname : localhost
+Port : 80
+Path : /data
+Querystring: a=10&b=20
+
+http://192.168.1.7:5000/data?a=10&b=30
+Hostname : localhost
+Port : 5000
+Path : /data
+Querystring: a=10&b=20
+
+
+Request Packet
+[header][request body]
+GET /mx-linux-blog/ HTTP/3
+Host: mxlinux.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type : x-www-form-urlencoded
+[request-body]
+
+Response
+[header][response body]
+HTTP/3 200 OK
+date: Mon, 20 Jun 2022 03:50:03 GMT
+content-type: text/html; charset=UTF-8
+[response body]
+
+
+Header:Metadata of request
+
+Types of request:
+GET -> Retrive records from the server -> Send data in the URL not in request body
+POST -> Create new records on server -> Sends data in request body
+PUT -> Update record on server -> sends data in request body
+DELETE -> Delete record on server-> send data in request body
+PATCH -> Update record on server -> send data in request body
+HEAD -> Same as GET without response body means use it to test
+CONNECT -> For connection
+TRACE -> for testing
+OPTIONS -> for config
+
+->Browser creates GET type request from address bar, anchor tag, img tag
+->You can choose POST in form tag or use js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+1.Create server that handle below path:
+	a)/data -> Respond "this is data"
+	b)/profile -> Respond "this is profile"
+	
+2.Create server that handle below path:
+	a)/data -> Respond with data.html page
+	b)/profile -> Respond with profile.html page
+3.Create four html files addition.html, substraction.html, multiplication.html, division.html  and perform the airthmatic calculation
