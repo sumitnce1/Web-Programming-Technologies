@@ -1,0 +1,90 @@
+<!-- 1.Create calender using JS with select month year dropdown option -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar</title>
+  </head>
+  <body>
+    <div id="calendar" ></div>
+
+    <script>
+      // get current date
+      var today = new Date();
+      var currentMonth = today.getMonth();
+      var currentYear = today.getFullYear();
+
+      // create month and year dropdown
+      var monthDropdown = "<select id='monthDropdown' >";
+      for (var i = 0; i < 12; i++) {
+        monthDropdown += "<option value='" + i + "'>" + new Date(2000, i).toLocaleString('default', { month: 'long' }) + "</option>";
+      }
+      monthDropdown += "</select>";
+
+      var yearDropdown = "<select id='yearDropdown'>";
+      for (var i = 1900; i <= 2100; i++) {
+        yearDropdown += "<option value='" + i + "'>" + i + "</option>";
+      }
+      yearDropdown += "</select>";
+
+      // render calendar
+      renderCalendar(currentMonth, currentYear);
+
+      // add event listener to dropdowns
+      document.getElementById("monthDropdown").addEventListener("change", function() {
+        var selectedMonth = this.value;
+        var selectedYear = document.getElementById("yearDropdown").value;
+        renderCalendar(selectedMonth, selectedYear);
+      });
+
+      document.getElementById("yearDropdown").addEventListener("change", function() {
+        var selectedMonth = document.getElementById("monthDropdown").value;
+        var selectedYear = this.value;
+        renderCalendar(selectedMonth, selectedYear);
+      });
+
+      function renderCalendar(month, year) {
+        var firstDay = new Date(year, month, 1);
+        var lastDay = new Date(year, month + 1, 0);
+        var totalDays = lastDay.getDate();
+
+        var calendar = "<table>";
+
+        // render month and year
+        calendar += "<tr><th colspan='7'>" + monthDropdown + yearDropdown + "</th></tr>";
+
+        // render days of the week
+        calendar += "<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>";
+
+        // render days of the month
+        var date = 1;
+        for (var i = 0; i < 6; i++) {
+          calendar += "<tr>";
+          for (var j = 0; j < 7; j++) {
+            if (i === 0 && j < firstDay.getDay()) {
+              calendar += "<td></td>";
+            } else if (date > totalDays) {
+              break;
+            } else {
+              calendar += "<td>" + date + "</td>";
+              date++;
+            }
+          }
+          calendar += "</tr>";
+          if (date > totalDays) {
+            break;
+          }
+        }
+
+        calendar += "</table>";
+
+        document.getElementById("calendar").innerHTML = calendar;
+
+        // set selected values in dropdowns
+        document.getElementById("monthDropdown").value = month;
+        document.getElementById("yearDropdown").value = year;
+      }
+    </script>
+  </body>
+</html>

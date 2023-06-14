@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Calender</title>
+    <style>
+      #calendar {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+
+      #header {
+        margin-bottom: 10px;
+      }
+
+      #days {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #days th,
+      #days td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+      }
+
+      #days th {
+        background-color: #ddd;
+      }
+
+      #days td {
+        cursor: pointer;
+      }
+
+      #days td:hover {
+        background-color: #10c3ff;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        // Populate the month dropdown
+        var months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        for (var i = 0; i < months.length; i++) {
+          $("#month").append(
+            '<option value="' + i + '">' + months[i] + "</option>"
+          );
+        }
+
+        // Populate the year dropdown
+        var currentYear = new Date().getFullYear();
+        for (var i = currentYear - 50; i <= currentYear + 10; i++) {
+          $("#year").append('<option value="' + i + '">' + i + "</option>");
+        }
+
+        // Initialize the calendar
+        var date = new Date();
+        var month = date.getMonth();
+        var year = date.getFullYear();
+        updateCalendar(month, year);
+
+        // Update the calendar when the month or year dropdowns are changed
+        $("#month, #year").change(function () {
+          var month = $("#month").val();
+          var year = $("#year").val();
+          updateCalendar(month, year);
+        });
+      });
+
+      function updateCalendar(month, year) {
+        // Clear the table body
+        $("#days tbody").empty();
+
+        // Get the number of days in the month
+        var daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Get the index of the first day of the month
+        var firstDayIndex = new Date(year, month, 1).getDay();
+
+        // Create the table rows and cells
+        var date = 1;
+        for (var i = 0; i < 6; i++) {
+          var row = $("<tr>");
+          for (var j = 0; j < 7; j++) {
+            if (i === 0 && j < firstDayIndex) {
+              // Empty cell before the first day of the month
+              var cell = $("<td>");
+              row.append(cell);
+            } else if (date > daysInMonth) {
+              // Empty cell after the last day of the month
+              var cell = $("<td>");
+              row.append(cell);
+            } else {
+              // Cell for a day in the month
+              var cell = $("<td>" + date + "</td>");
+              row.append(cell);
+              date++;
+            }
+          }
+          $("#days tbody").append(row);
+        }
+
+        // Set the selected month and year in the dropdowns
+        $("#month").val(month);
+        $("#year").val(year);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="calendar">
+      <div id="header">
+        <select id="month"></select>
+        <select id="year"></select>
+      </div>
+      <table id="days">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>
