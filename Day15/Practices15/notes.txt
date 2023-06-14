@@ -1,0 +1,25 @@
+Create by Facebook
+Component bas UI
+1. React projecrt must be lower case and also without space
+npx create-react-app first_react_app
+cd folder name
+npm start
+Startup:
+-> public/index.html <- src/index.js <- src-App.js
+
+-> Work inside src folder
+-> 
+------------------------------------------
+-> public/index.html <- src/index.js <- src-App.js <-src/Create al files header
+
+> component name must start with uppercase
+> component name and file should be same
+> it must return JSX
+
+JSX:
+> Same HTML Tags with more restriction and features
+> Case Sensetives
+>All Tags must be closed <TAGNAME/> 
+<br/>
+<hr/>
+> Must have single root() tag

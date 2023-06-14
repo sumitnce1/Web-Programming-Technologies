@@ -1,0 +1,11 @@
+1.Create a react project and create three components A, B,C and try below component tree structure:
+a) A <- B <-C
+b) Use B and C in A, Use A in App
+c) Use A and B and C in App
+d) Use A in B and C, Use B and C in App
+
+2.Create four Components addition, substraction, multiplication, division and perform the airthmatic calculation. Use Form
+3.Write a code to take fruit name from user and print in list(Show list in different Component)
+
+4.Write react code to read movie data from user and show in table(+.
+Movie Fields : movieName, actor, release(date),Movie type(2d,3d,IMAX)(use checkbox), state(use select tag)
