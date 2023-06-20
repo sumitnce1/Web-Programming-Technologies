@@ -1,0 +1,28 @@
+node package manage:
+Tool is :npm
+package.json: contains project info and dependency(modules) info
+package-lock.json: Contains all installed  moudules and lock thier version
+
+Install package locally in current directrly (Downlaod in current directory node_modules folder):
+npm install package-name
+
+Install globally (Download in global node_modules folder) npm install package-name -g
+
+Uninstall package locally: npm uninstall package-name
+
+Uninstall package globally: npm uninstall package-name -g
+
+Package update:
+npm update package-name
+
+npm install nodemon -g
+npm install bcrypt
+
+------------
+1. npm init
+2. npm install express
+
+
+
+
+
